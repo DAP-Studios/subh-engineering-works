@@ -1,13 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
-/**
- * Resources Page - Subh Engineering Works
- * Design: Industrial Minimalism
- * - Downloadable brochures and catalogs
- * - Technical documentation
- * - Installation guides
- */
-
+import SeoHead from "@/components/SeoHead";
+import { articleSchema, breadcrumbSchema } from "@/lib/seo";
 import { Button } from "@/components/ui/button";
 import { useLocation } from "wouter";
 
@@ -16,139 +10,68 @@ export default function Resources() {
 
   const brochures = [
     {
-      title: "Complete Product Catalog 2026",
-      description: "Comprehensive catalog with all valve types, specifications, pressure ratings, and material options.",
+      title: "Industrial Valve Product Catalogue",
+      description: "Overview of available valve categories, materials, and end connections for project planning and procurement.",
       size: "2.4 MB",
-      icon: "ðŸ“‹",
+      icon: "??",
     },
     {
-      title: "Gate Valve Technical Specifications",
-      description: "Detailed specs for gate valves including API 600/602 compliance, pressure ratings, and sizing charts.",
+      title: "Valve Selection Guide by Application",
+      description: "Use-case based guide to choose the right valve for water, oil, gas, steam, and chemical handling.",
       size: "1.8 MB",
-      icon: "ðŸ”§",
+      icon: "??",
     },
     {
-      title: "Globe Valve Selection Guide",
-      description: "Complete guide for selecting the right globe valve for your application with flow calculations.",
+      title: "Valve Service and Maintenance Handbook",
+      description: "Inspection routines, preventive checks, servicing intervals, and shutdown-risk reduction tips.",
       size: "1.5 MB",
-      icon: "ðŸ“Š",
+      icon: "???",
     },
     {
-      title: "Check Valve Installation Manual",
-      description: "Step-by-step installation, commissioning, and maintenance procedures for check valves.",
+      title: "Installation and Commissioning Checklist",
+      description: "Step-by-step checklist to improve installation quality, commissioning safety, and startup reliability.",
       size: "1.2 MB",
-      icon: "ðŸ“–",
+      icon: "?",
     },
   ];
 
-  const technicalGuides = [
-    {
-      title: "Pressure-Temperature Charts",
-      description: "Complete P-T charts for all valve classes and materials.",
-      format: "PDF",
-    },
-    {
-      title: "Hydrostatic Testing Procedures",
-      description: "API 598 compliant testing procedures and certification documentation.",
-      format: "PDF",
-    },
-    {
-      title: "Material Selection Guide",
-      description: "Guide for selecting appropriate materials for corrosive and extreme environments.",
-      format: "PDF",
-    },
-    {
-      title: "Valve Sizing Calculator",
-      description: "Excel spreadsheet for calculating proper valve sizes based on flow rates.",
-      format: "XLSX",
-    },
-    {
-      title: "Maintenance Schedule Template",
-      description: "Preventive maintenance schedule and checklist for industrial valve systems.",
-      format: "PDF",
-    },
-    {
-      title: "Troubleshooting Guide",
-      description: "Common valve problems, diagnosis, and solutions for industrial applications.",
-      format: "PDF",
-    },
+  const resourceSchema = [
+    breadcrumbSchema([
+      { name: "Home", url: "https://subh-engineering-works.manus.space/" },
+      { name: "Resources", url: "https://subh-engineering-works.manus.space/resources" },
+    ]),
+    articleSchema(
+      "Industrial Valve Knowledge Resources",
+      "Guides for valve selection, maintenance, standards, and engineering references.",
+      "2026-04-04",
+    ),
   ];
 
   return (
-    <div className="min-h-screen bg-white">
-      {/* Top Info Bar */}
-      <div className="hidden md:block bg-gray-900 text-white py-2 px-6 border-b border-gray-800">
-        <div className="max-w-7xl mx-auto flex justify-between text-xs uppercase tracking-widest font-bold">
-          <span>ISO Compliant Standards â€¢ API 598 Tested</span>
-          <span>Vapi, Gujarat, India â€¢ +91 6464646464</span>
-        </div>
-      </div>
+    <div className="min-h-screen bg-white flex flex-col">
+      <SeoHead
+        title="Industrial Valve Resources | Catalogues, Guides, Checklists"
+        description="Download practical valve resources including product catalogues, selection guides, service handbooks, and commissioning checklists."
+        keywords="industrial valve resources, valve catalogue, valve selection guide, valve maintenance guide"
+        canonicalUrl="https://subh-engineering-works.manus.space/resources"
+        jsonLd={resourceSchema}
+      />
+      <Navigation />
 
-      {/* Navigation */}
-      <nav className="sticky top-0 z-50 bg-white border-b border-gray-200 px-6 py-5 shadow-sm">
-        <div className="max-w-7xl mx-auto flex justify-between items-center">
-          <button
-            onClick={() => setLocation("/")}
-            className="flex items-center gap-3 hover:opacity-80 transition"
-          >
-            <span className="text-3xl font-black tracking-tighter text-brand-red">SUBH</span>
-            <div className="leading-none border-l-2 border-black pl-2 uppercase text-xs font-extrabold tracking-widest">
-              <p>Engineering</p>
-              <p>Works</p>
-            </div>
-          </button>
-
-          <div className="hidden lg:flex gap-10 text-xs font-bold uppercase tracking-widest">
-            <button
-              onClick={() => setLocation("/")}
-              className="text-gray-700 hover:text-brand-red transition pb-1"
-            >
-              Home
-            </button>
-            <button
-              onClick={() => setLocation("/about")}
-              className="text-gray-700 hover:text-brand-red transition pb-1"
-            >
-              About
-            </button>
-            <button
-              onClick={() => setLocation("/products")}
-              className="text-gray-700 hover:text-brand-red transition pb-1"
-            >
-              Products
-            </button>
-            <button
-              onClick={() => setLocation("/services")}
-              className="text-gray-700 hover:text-brand-red transition pb-1"
-            >
-              Services
-            </button>
-            <button
-              onClick={() => setLocation("/contact")}
-              className="bg-brand-red text-white px-4 py-2 hover:bg-brand-red-dark transition font-bold"
-            >
-              Contact
-            </button>
-          </div>
-        </div>
-      </nav>
-
-      {/* Hero Section */}
       <header className="relative min-h-[350px] bg-gray-900 text-white flex items-center overflow-hidden">
         <div className="max-w-7xl mx-auto px-6 py-20 w-full">
           <h1 className="text-6xl md:text-7xl font-black uppercase tracking-tighter leading-tight mb-6">
             Technical <span className="text-brand-red">Resources</span>
           </h1>
-          <p className="text-lg text-gray-300 max-w-2xl">
-            Download comprehensive guides, specifications, and technical documentation for our industrial valve products.
+          <p className="text-lg text-gray-300 max-w-3xl">
+            Practical references for engineers, buyers, and maintenance teams to make faster, safer valve decisions.
           </p>
         </div>
       </header>
 
-      {/* Product Brochures */}
       <section className="py-24 px-6 border-b border-gray-200">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-black uppercase tracking-tight mb-4">Product Brochures</h2>
+          <h2 className="text-4xl font-black uppercase tracking-tight mb-4">Most Downloaded Guides</h2>
           <div className="h-1 w-24 bg-brand-red mb-16"></div>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -158,7 +81,7 @@ export default function Resources() {
                 <h3 className="text-xl font-black uppercase mb-3">{brochure.title}</h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">{brochure.description}</p>
                 <div className="flex justify-between items-center">
-                  <span className="text-xs font-bold text-gray-500 uppercase">PDF â€¢ {brochure.size}</span>
+                  <span className="text-xs font-bold text-gray-500 uppercase">PDF • {brochure.size}</span>
                   <Button className="bg-brand-red text-white px-6 py-2 text-xs font-bold uppercase tracking-widest hover:bg-brand-red-dark transition">
                     Download
                   </Button>
@@ -169,96 +92,58 @@ export default function Resources() {
         </div>
       </section>
 
-      {/* Technical Guides */}
       <section className="bg-gray-50 py-24 px-6 border-b border-gray-200">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-black uppercase tracking-tight mb-4">Technical Guides</h2>
-          <div className="h-1 w-24 bg-brand-red mb-16"></div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {technicalGuides.map((guide, idx) => (
-              <div key={idx} className="bg-white border-2 border-gray-200 p-6 hover:shadow-lg transition hover-lift">
-                <h3 className="text-lg font-black uppercase mb-3">{guide.title}</h3>
-                <p className="text-gray-600 mb-6 text-sm leading-relaxed">{guide.description}</p>
-                <div className="flex justify-between items-center">
-                  <span className="text-xs font-bold text-brand-red uppercase">{guide.format}</span>
-                  <Button
-                    variant="outline"
-                    className="text-xs font-bold uppercase tracking-widest border-2 border-brand-red text-brand-red hover:bg-brand-red hover:text-white transition"
-                  >
-                    Download
-                  </Button>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Quick Links */}
-      <section className="py-24 px-6 border-b border-gray-200">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-black uppercase tracking-tight mb-4">Quick Reference</h2>
+          <h2 className="text-4xl font-black uppercase tracking-tight mb-4">Quick Knowledge Blocks</h2>
           <div className="h-1 w-24 bg-brand-red mb-16"></div>
 
           <div className="grid md:grid-cols-3 gap-8">
             <div className="bg-white border-l-4 border-brand-red p-8">
-              <h3 className="text-xl font-black uppercase mb-4">API Standards</h3>
+              <h3 className="text-xl font-black uppercase mb-4">Selection Basics</h3>
               <ul className="space-y-3 text-sm text-gray-600">
-                <li>â€¢ API 598 - Valve Testing</li>
-                <li>â€¢ API 600 - Gate Valves</li>
-                <li>â€¢ API 602 - Compact Gate Valves</li>
-                <li>â€¢ API 6D - Pipeline Valves</li>
+                <li>• Confirm pressure class and temperature range</li>
+                <li>• Validate media compatibility with material</li>
+                <li>• Select end connection by pipeline standard</li>
+                <li>• Define operation and maintenance frequency</li>
               </ul>
             </div>
 
             <div className="bg-white border-l-4 border-brand-red p-8">
-              <h3 className="text-xl font-black uppercase mb-4">International Standards</h3>
+              <h3 className="text-xl font-black uppercase mb-4">Common Standards</h3>
               <ul className="space-y-3 text-sm text-gray-600">
-                <li>â€¢ BS 1873 - Globe Valves</li>
-                <li>â€¢ BS 1868 - Check Valves</li>
-                <li>â€¢ IS 14846 - Gate Valves</li>
-                <li>â€¢ ISO 9001 - Quality Management</li>
+                <li>• API 598 - Valve inspection and testing</li>
+                <li>• API 600 / 602 - Gate valve standards</li>
+                <li>• BS 1873 - Globe valve standard</li>
+                <li>• ISO 9001 - Quality management framework</li>
               </ul>
             </div>
 
             <div className="bg-white border-l-4 border-brand-red p-8">
-              <h3 className="text-xl font-black uppercase mb-4">Pressure Ratings</h3>
+              <h3 className="text-xl font-black uppercase mb-4">Reliability Tips</h3>
               <ul className="space-y-3 text-sm text-gray-600">
-                <li>â€¢ 150 PSI (10 Bar)</li>
-                <li>â€¢ 300 PSI (20 Bar)</li>
-                <li>â€¢ 600 PSI (40 Bar)</li>
-                <li>â€¢ 2500 PSI (170 Bar)</li>
+                <li>• Plan preventive checks before shutdown cycles</li>
+                <li>• Track valve history and failure patterns</li>
+                <li>• Use testing records for audit readiness</li>
+                <li>• Replace critical wear parts proactively</li>
               </ul>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
       <section className="bg-black text-white py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-black uppercase tracking-tight mb-6">
-            Need Custom Documentation?
-          </h2>
+          <h2 className="text-4xl font-black uppercase tracking-tight mb-6">Need a Custom Technical Pack?</h2>
           <p className="text-lg mb-10 text-gray-300">
-            Our technical team can prepare customized specifications and documentation for your specific application requirements.
+            We can prepare project-specific documentation with specs, material recommendations, and service scope.
           </p>
-          <Button
-            onClick={() => setLocation("/contact")}
-            className="bg-brand-red text-white px-10 py-6 text-sm font-bold uppercase tracking-widest hover:bg-brand-red-dark transition"
-          >
+          <Button onClick={() => setLocation("/contact")} className="bg-brand-red text-white px-10 py-6 text-sm font-bold uppercase tracking-widest hover:bg-brand-red-dark transition">
             Request Custom Docs
           </Button>
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-100 border-t border-gray-200 py-12 px-6 text-center">
-        <p className="text-xs uppercase tracking-widest text-gray-500 font-bold">
-          Subh Engineering Works â€¢ Gujarat, India â€¢ 2026
-        </p>
-      </footer>
+      <Footer />
     </div>
   );
 }
