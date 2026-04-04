@@ -72,6 +72,12 @@ export default function Home() {
 
       <section className="py-24 px-6 border-b border-gray-200">
         <div className="max-w-7xl mx-auto">
+          <div className="mb-10 bg-gray-50 border border-gray-200 p-5">
+            <p className="text-xs uppercase tracking-widest font-bold text-gray-600 mb-2">Google Business Snapshot</p>
+            <p className="font-semibold text-gray-900">Subh Engineering Works • 5.0 (1 review) • Opens 8:00 AM</p>
+            <p className="text-gray-700 mt-2 italic">"Well experienced valve repairing and valve supplier."</p>
+          </div>
+
           <h2 className="text-4xl font-black uppercase tracking-tight mb-4">About Subh Engineering Works</h2>
           <div className="h-1 w-24 mb-8" style={{ backgroundColor: "#D22B2B" }}></div>
           <p className="text-gray-700 max-w-4xl mb-12 leading-relaxed">

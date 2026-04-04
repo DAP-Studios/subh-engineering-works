@@ -34,7 +34,7 @@ export default function Navigation() {
       <div className="hidden md:block bg-gray-900 text-white py-2 px-6 border-b border-gray-800">
         <div className="max-w-7xl mx-auto flex justify-between text-xs uppercase tracking-widest font-bold">
           <span>ISO Compliant Standards • API 598 Tested</span>
-          <span>Vapi, Gujarat, India • +91 6464646464</span>
+          <span>Google Rating 5.0 (1) • Opens 8:00 AM</span>
         </div>
       </div>
 

@@ -48,8 +48,9 @@ export default function Footer() {
               </p>
               <div className="space-y-2 text-sm text-gray-400">
                 <p>Gujarat, India</p>
-                <p>+91 XXXXX XXXXX</p>
+                <p>Phone number not listed on Google profile</p>
                 <p>info@subhengineeringworks.com</p>
+                <p>subh-engineering-works.manus.space</p>
               </div>
             </div>
 

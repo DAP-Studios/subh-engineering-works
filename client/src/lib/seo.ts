@@ -21,11 +21,15 @@ export const organizationSchema = {
   },
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+91-XXXXXXXXXX",
     contactType: "sales and service",
     email: "info@subhengineeringworks.com",
     areaServed: ["IN"],
     availableLanguage: ["en", "hi", "gu"],
+  },
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5.0",
+    reviewCount: "1",
   },
 };
 
@@ -40,16 +44,20 @@ export const localBusinessSchema = {
     addressRegion: "Gujarat",
     addressCountry: "IN",
   },
-  telephone: "+91-XXXXXXXXXX",
   email: "info@subhengineeringworks.com",
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
       dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-      opens: "09:00",
+      opens: "08:00",
       closes: "19:00",
     },
   ],
+  aggregateRating: {
+    "@type": "AggregateRating",
+    ratingValue: "5.0",
+    reviewCount: "1",
+  },
 };
 
 export const productSchema = (name: string, description: string, price?: string) => ({

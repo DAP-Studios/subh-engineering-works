@@ -81,7 +81,7 @@ export default function Resources() {
                 <h3 className="text-xl font-black uppercase mb-3">{brochure.title}</h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">{brochure.description}</p>
                 <div className="flex justify-between items-center">
-                  <span className="text-xs font-bold text-gray-500 uppercase">PDF • {brochure.size}</span>
+                  <span className="text-xs font-bold text-gray-500 uppercase">PDF - {brochure.size}</span>
                   <Button className="bg-brand-red text-white px-6 py-2 text-xs font-bold uppercase tracking-widest hover:bg-brand-red-dark transition">
                     Download
                   </Button>
@@ -101,30 +101,30 @@ export default function Resources() {
             <div className="bg-white border-l-4 border-brand-red p-8">
               <h3 className="text-xl font-black uppercase mb-4">Selection Basics</h3>
               <ul className="space-y-3 text-sm text-gray-600">
-                <li>• Confirm pressure class and temperature range</li>
-                <li>• Validate media compatibility with material</li>
-                <li>• Select end connection by pipeline standard</li>
-                <li>• Define operation and maintenance frequency</li>
+                <li>ï¿½ Confirm pressure class and temperature range</li>
+                <li>ï¿½ Validate media compatibility with material</li>
+                <li>ï¿½ Select end connection by pipeline standard</li>
+                <li>ï¿½ Define operation and maintenance frequency</li>
               </ul>
             </div>
 
             <div className="bg-white border-l-4 border-brand-red p-8">
               <h3 className="text-xl font-black uppercase mb-4">Common Standards</h3>
               <ul className="space-y-3 text-sm text-gray-600">
-                <li>• API 598 - Valve inspection and testing</li>
-                <li>• API 600 / 602 - Gate valve standards</li>
-                <li>• BS 1873 - Globe valve standard</li>
-                <li>• ISO 9001 - Quality management framework</li>
+                <li>ï¿½ API 598 - Valve inspection and testing</li>
+                <li>ï¿½ API 600 / 602 - Gate valve standards</li>
+                <li>ï¿½ BS 1873 - Globe valve standard</li>
+                <li>ï¿½ ISO 9001 - Quality management framework</li>
               </ul>
             </div>
 
             <div className="bg-white border-l-4 border-brand-red p-8">
               <h3 className="text-xl font-black uppercase mb-4">Reliability Tips</h3>
               <ul className="space-y-3 text-sm text-gray-600">
-                <li>• Plan preventive checks before shutdown cycles</li>
-                <li>• Track valve history and failure patterns</li>
-                <li>• Use testing records for audit readiness</li>
-                <li>• Replace critical wear parts proactively</li>
+                <li>ï¿½ Plan preventive checks before shutdown cycles</li>
+                <li>ï¿½ Track valve history and failure patterns</li>
+                <li>ï¿½ Use testing records for audit readiness</li>
+                <li>ï¿½ Replace critical wear parts proactively</li>
               </ul>
             </div>
           </div>

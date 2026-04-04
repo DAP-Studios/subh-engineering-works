@@ -94,7 +94,7 @@ export default function Contact() {
               </div>
               <div>
                 <p className="text-sm font-bold uppercase tracking-widest text-gray-600 mb-2">Phone / WhatsApp</p>
-                <p className="text-lg font-semibold text-gray-900">+91 XXXXX XXXXX</p>
+                <p className="text-lg font-semibold text-gray-900">Phone number not listed on Google profile</p>
               </div>
               <div>
                 <p className="text-sm font-bold uppercase tracking-widest text-gray-600 mb-2">Email</p>
@@ -102,11 +102,11 @@ export default function Contact() {
               </div>
               <div>
                 <p className="text-sm font-bold uppercase tracking-widest text-gray-600 mb-2">Address</p>
-                <p className="text-lg font-semibold text-gray-900">[Your full address], Gujarat, India</p>
+                <p className="text-lg font-semibold text-gray-900">Gujarat, India</p>
               </div>
               <div>
                 <p className="text-sm font-bold uppercase tracking-widest text-gray-600 mb-2">Working Hours</p>
-                <p className="text-lg font-semibold text-gray-900">Monday - Saturday: 9:00 AM - 7:00 PM</p>
+                <p className="text-lg font-semibold text-gray-900">Opens daily at 8:00 AM (as listed on Google profile)</p>
               </div>
             </div>
           </div>
