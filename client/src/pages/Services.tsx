@@ -48,10 +48,10 @@ export default function Services() {
         title="Industrial Valve Services in India | Subh Engineering Works"
         description="Complete valve services including supply, custom manufacturing, repair, AMC, installation, testing, and technical consultation."
         keywords="industrial valve services, valve repair, valve maintenance AMC, valve testing, valve installation India"
-        canonicalUrl="https://subh-engineering-works.manus.space/services"
+        canonicalUrl="https://subhengineeringworks.com/services"
         jsonLd={breadcrumbSchema([
-          { name: "Home", url: "https://subh-engineering-works.manus.space/" },
-          { name: "Services", url: "https://subh-engineering-works.manus.space/services" },
+          { name: "Home", url: "https://subhengineeringworks.com/" },
+          { name: "Services", url: "https://subhengineeringworks.com/services" },
         ])}
       />
       <Navigation />

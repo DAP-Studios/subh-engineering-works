@@ -17,7 +17,7 @@ export default function About() {
         title="Who We Are | Subh Engineering Works"
         description="Subh Engineering Works is an industrial valve company established in 2015, offering valve manufacturing, sales, and servicing solutions across India."
         keywords="about Subh Engineering Works, industrial valve company, valve manufacturing India, valve servicing"
-        canonicalUrl="https://subh-engineering-works.manus.space/about"
+        canonicalUrl="https://subhengineeringworks.com/about"
         jsonLd={organizationSchema}
       />
       <Navigation />

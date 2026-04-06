@@ -210,3 +210,47 @@ html {
   background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
   background-size: 1000px 100%;
 }
+
+@keyframes heroFloat {
+  0%, 100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(0, -18px, 0) scale(1.04);
+  }
+}
+
+@keyframes heroGlow {
+  0%, 100% {
+    opacity: 0.18;
+    filter: blur(18px);
+  }
+  50% {
+    opacity: 0.34;
+    filter: blur(26px);
+  }
+}
+
+@keyframes heroSweep {
+  0% {
+    transform: translateX(-18%) rotate(12deg);
+  }
+  50% {
+    transform: translateX(10%) rotate(12deg);
+  }
+  100% {
+    transform: translateX(-18%) rotate(12deg);
+  }
+}
+
+.animate-hero-float {
+  animation: heroFloat 10s ease-in-out infinite;
+}
+
+.animate-hero-glow {
+  animation: heroGlow 8s ease-in-out infinite;
+}
+
+.animate-hero-sweep {
+  animation: heroSweep 14s ease-in-out infinite;
+}

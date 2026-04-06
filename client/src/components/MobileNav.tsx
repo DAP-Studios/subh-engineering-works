@@ -16,10 +16,6 @@ export default function MobileNav() {
     { label: "About", path: "/about" },
     { label: "Products", path: "/products" },
     { label: "Services", path: "/services" },
-    { label: "Testimonials", path: "/testimonials" },
-    { label: "Comparison", path: "/comparison" },
-    { label: "FAQ", path: "/faq" },
-    { label: "Resources", path: "/resources" },
     { label: "Contact", path: "/contact" },
   ];
 

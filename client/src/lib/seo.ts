@@ -6,7 +6,7 @@ export const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Subh Engineering Works",
-  url: "https://subh-engineering-works.manus.space",
+  url: "https://subhengineeringworks.com",
   description:
     "Industrial valve manufacturing, sales, and servicing company in Gujarat, India. Trusted since 2015.",
   foundingDate: "2015",

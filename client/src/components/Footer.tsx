@@ -3,9 +3,11 @@
  */
 
 import { useLocation } from "wouter";
+import dapLogo from "../assets/dap.png";
 
 export default function Footer() {
   const [, setLocation] = useLocation();
+  const currentYear = new Date().getFullYear();
 
   const footerLinks = [
     {
@@ -14,14 +16,6 @@ export default function Footer() {
         { label: "Gate Valves", path: "/products" },
         { label: "Globe Valves", path: "/products" },
         { label: "Check Valves", path: "/products" },
-      ],
-    },
-    {
-      title: "Resources",
-      links: [
-        { label: "Brochures", path: "/resources" },
-        { label: "Technical Guides", path: "/resources" },
-        { label: "FAQ", path: "/faq" },
       ],
     },
     {
@@ -38,19 +32,18 @@ export default function Footer() {
     <footer className="bg-gray-900 text-white border-t-4" style={{ borderTopColor: "#D22B2B" }}>
       <div className="px-6 py-16">
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-4 gap-12 mb-12">
+          <div className="grid gap-12 md:grid-cols-[1.5fr_1fr_1fr] mb-12">
             <div>
               <h3 className="text-2xl font-black tracking-tighter mb-4" style={{ color: "#D22B2B" }}>
                 SUBH
               </h3>
-              <p className="text-gray-300 text-sm leading-relaxed mb-6">
-                Subh Engineering Works - Precision Valves. Dependable Service. Trusted Since 2015.
+              <p className="max-w-md text-gray-300 text-sm leading-relaxed mb-6">
+                Precision valves engineered for reliability, industrial uptime, and long-term performance.
               </p>
               <div className="space-y-2 text-sm text-gray-400">
                 <p>Gujarat, India</p>
-                <p>Phone number not listed on Google profile</p>
                 <p>info@subhengineeringworks.com</p>
-                <p>subh-engineering-works.manus.space</p>
+                <p>subhengineeringworks.com</p>
               </div>
             </div>
 
@@ -72,10 +65,40 @@ export default function Footer() {
             ))}
           </div>
 
-          <div className="border-t border-gray-800 pt-8 text-center">
-            <p className="text-xs uppercase tracking-widest text-gray-500 font-bold">
-              Subh Engineering Works - Precision Valves. Dependable Service. Trusted Since 2015.
+          <div className="border-t border-gray-800 pt-6 flex flex-col gap-4 md:flex-row md:items-start md:justify-between lg:items-center">
+            <p className="text-xs tracking-wide text-gray-400">
+              © {currentYear} Subh Engineering Works. All rights reserved.
             </p>
+
+            <div className="w-full md:w-auto md:max-w-[430px] rounded-md border border-gray-700 bg-gray-800/60 px-3 py-2">
+              <div className="flex items-start sm:items-center gap-2 sm:gap-3">
+                <img src={dapLogo} alt="DAP Tech Solutions" className="h-9 w-auto flex-shrink-0" />
+                <div className="min-w-0 flex flex-col gap-1 text-xs sm:text-sm font-semibold leading-5">
+                  <p className="text-gray-200 break-words">
+                    Website by{" "}
+                    <a
+                      href="https://thedap.live"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-400 hover:text-blue-300"
+                    >
+                      DAP Tech Solutions
+                    </a>
+                  </p>
+                  <p className="text-gray-200 break-words">
+                    Deep Parmar{" "}
+                    <a
+                      href="https://wa.me/919725362234"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-green-400 hover:text-green-300"
+                    >
+                      +91 9725362234
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

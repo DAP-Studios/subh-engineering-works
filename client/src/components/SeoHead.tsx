@@ -20,7 +20,7 @@ export default function SeoHead({
   description,
   keywords,
   ogImage = "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=1200&h=630&fit=crop",
-  ogUrl = "https://subh-engineering-works.manus.space/",
+  ogUrl = "https://subhengineeringworks.com/",
   canonicalUrl,
   jsonLd,
 }: SeoHeadProps) {

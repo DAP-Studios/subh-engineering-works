@@ -60,7 +60,7 @@ export default function Products() {
         title="Our Product Range | Subh Engineering Works"
         description="Comprehensive industrial valve range with direct sales, custom sourcing, and bulk supply options."
         keywords="industrial valves, gate valves, globe valves, ball valves, butterfly valves, check valves"
-        canonicalUrl="https://subh-engineering-works.manus.space/products"
+        canonicalUrl="https://subhengineeringworks.com/products"
         jsonLd={productSchema("Industrial Valve Product Range", "Comprehensive range of industrial valves for multiple applications")}
       />
       <Navigation />
@@ -128,12 +128,6 @@ export default function Products() {
               style={{ backgroundColor: "#D22B2B" }}
             >
               Request a Quote
-            </button>
-            <button
-              onClick={() => setLocation("/resources")}
-              className="border-2 border-white text-white px-8 py-4 text-sm font-bold uppercase tracking-widest transition"
-            >
-              Download Product Catalogue
             </button>
             <button
               onClick={() => setLocation("/contact")}

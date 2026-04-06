@@ -17,10 +17,6 @@ export default function Navigation() {
     { label: "About", path: "/about" },
     { label: "Products", path: "/products" },
     { label: "Services", path: "/services" },
-    { label: "Testimonials", path: "/testimonials" },
-    { label: "Comparison", path: "/comparison" },
-    { label: "FAQ", path: "/faq" },
-    { label: "Resources", path: "/resources" },
   ];
 
   const handleNavClick = (path: string) => {
@@ -31,12 +27,12 @@ export default function Navigation() {
   return (
     <>
       {/* Top Info Bar */}
-      <div className="hidden md:block bg-gray-900 text-white py-2 px-6 border-b border-gray-800">
+      {/* <div className="hidden md:block bg-gray-900 text-white py-2 px-6 border-b border-gray-800">
         <div className="max-w-7xl mx-auto flex justify-between text-xs uppercase tracking-widest font-bold">
           <span>ISO Compliant Standards • API 598 Tested</span>
           <span>Google Rating 5.0 (1) • Opens 8:00 AM</span>
         </div>
-      </div>
+      </div> */}
 
       {/* Main Navigation */}
       <nav className="sticky top-0 z-50 bg-white border-b border-gray-200 px-6 py-5 shadow-sm">
@@ -49,7 +45,7 @@ export default function Navigation() {
             <span className="text-3xl font-black tracking-tighter" style={{ color: "#D22B2B" }}>
               SUBH
             </span>
-            <div className="leading-none border-l-2 border-black pl-2 uppercase text-xs font-extrabold tracking-widest">
+            <div className="text-left leading-none border-l-3 border-black pl-2 uppercase text-xs font-extrabold tracking-widest">
               <p>Engineering</p>
               <p>Works</p>
             </div>

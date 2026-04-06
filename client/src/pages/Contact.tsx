@@ -41,10 +41,10 @@ export default function Contact() {
         title="Contact Subh Engineering Works | Quote, Sales, Service Support"
         description="Contact Subh Engineering Works for industrial valve quotations, servicing support, manufacturing enquiries, and technical consultation."
         keywords="contact industrial valve supplier, valve quote India, valve service contact"
-        canonicalUrl="https://subh-engineering-works.manus.space/contact"
+        canonicalUrl="https://subhengineeringworks.com/contact"
         jsonLd={breadcrumbSchema([
-          { name: "Home", url: "https://subh-engineering-works.manus.space/" },
-          { name: "Contact", url: "https://subh-engineering-works.manus.space/contact" },
+          { name: "Home", url: "https://subhengineeringworks.com/" },
+          { name: "Contact", url: "https://subhengineeringworks.com/contact" },
         ])}
       />
       <Navigation />
