@@ -37,7 +37,8 @@ export const localBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   name: "Subh Engineering Works",
-  image: "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=400&fit=crop",
+  image:
+    "https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=400&fit=crop",
   description: "Precision valves. Dependable service. Trusted since 2015.",
   address: {
     "@type": "PostalAddress",
@@ -48,7 +49,14 @@ export const localBusinessSchema = {
   openingHoursSpecification: [
     {
       "@type": "OpeningHoursSpecification",
-      dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+      dayOfWeek: [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday",
+        "Saturday",
+      ],
       opens: "08:00",
       closes: "19:00",
     },
@@ -60,7 +68,11 @@ export const localBusinessSchema = {
   },
 };
 
-export const productSchema = (name: string, description: string, price?: string) => ({
+export const productSchema = (
+  name: string,
+  description: string,
+  price?: string
+) => ({
   "@context": "https://schema.org",
   "@type": "Product",
   name,
@@ -83,7 +95,9 @@ export const productSchema = (name: string, description: string, price?: string)
   }),
 });
 
-export const breadcrumbSchema = (items: Array<{ name: string; url: string }>) => ({
+export const breadcrumbSchema = (
+  items: Array<{ name: string; url: string }>
+) => ({
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
   itemListElement: items.map((item, index) => ({
@@ -94,10 +108,12 @@ export const breadcrumbSchema = (items: Array<{ name: string; url: string }>) =>
   })),
 });
 
-export const faqSchema = (faqs: Array<{ question: string; answer: string }>) => ({
+export const faqSchema = (
+  faqs: Array<{ question: string; answer: string }>
+) => ({
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  mainEntity: faqs.map((faq) => ({
+  mainEntity: faqs.map(faq => ({
     "@type": "Question",
     name: faq.question,
     acceptedAnswer: {
@@ -107,7 +123,11 @@ export const faqSchema = (faqs: Array<{ question: string; answer: string }>) => 
   })),
 });
 
-export const articleSchema = (title: string, description: string, datePublished: string) => ({
+export const articleSchema = (
+  title: string,
+  description: string,
+  datePublished: string
+) => ({
   "@context": "https://schema.org",
   "@type": "Article",
   headline: title,

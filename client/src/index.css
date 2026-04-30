@@ -46,24 +46,24 @@
 :root {
   /* Industrial Minimalism Design System */
   /* Brand Red: #D22B2B for strategic accents */
-  --brand-red: #D22B2B;
-  --brand-red-dark: #A01F1F;
-  
+  --brand-red: #d22b2b;
+  --brand-red-dark: #a01f1f;
+
   /* Primary colors: Monochromatic base */
-  --primary: #D22B2B;
-  --primary-foreground: #FFFFFF;
-  --sidebar-primary: #D22B2B;
-  --sidebar-primary-foreground: #FFFFFF;
-  
+  --primary: #d22b2b;
+  --primary-foreground: #ffffff;
+  --sidebar-primary: #d22b2b;
+  --sidebar-primary-foreground: #ffffff;
+
   /* Chart colors: Red-based palette */
-  --chart-1: #D22B2B;
-  --chart-2: #A01F1F;
-  --chart-3: #7A1515;
-  --chart-4: #5C0F0F;
-  --chart-5: #3D0A0A;
-  
+  --chart-1: #d22b2b;
+  --chart-2: #a01f1f;
+  --chart-3: #7a1515;
+  --chart-4: #5c0f0f;
+  --chart-5: #3d0a0a;
+
   --radius: 0.25rem;
-  
+
   /* Light theme: White background with dark text */
   --background: oklch(1 0 0);
   --foreground: oklch(0.15 0.01 0);
@@ -71,35 +71,35 @@
   --card-foreground: oklch(0.15 0.01 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.15 0.01 0);
-  
+
   /* Secondary: Light gray for subtle elements */
   --secondary: oklch(0.94 0.001 0);
   --secondary-foreground: oklch(0.3 0.01 0);
-  
+
   /* Muted: Neutral grays */
   --muted: oklch(0.88 0.001 0);
   --muted-foreground: oklch(0.5 0.01 0);
-  
+
   /* Accent: Brand red */
-  --accent: #D22B2B;
+  --accent: #d22b2b;
   --accent-foreground: oklch(1 0 0);
-  
+
   /* Destructive: Red tones */
-  --destructive: #D22B2B;
+  --destructive: #d22b2b;
   --destructive-foreground: oklch(1 0 0);
-  
+
   /* Borders and inputs */
   --border: oklch(0.92 0.001 0);
   --input: oklch(0.97 0.001 0);
-  --ring: #D22B2B;
-  
+  --ring: #d22b2b;
+
   /* Sidebar */
   --sidebar: oklch(1 0 0);
   --sidebar-foreground: oklch(0.15 0.01 0);
-  --sidebar-accent: #D22B2B;
+  --sidebar-accent: #d22b2b;
   --sidebar-accent-foreground: oklch(1 0 0);
   --sidebar-border: oklch(0.92 0.001 0);
-  --sidebar-ring: #D22B2B;
+  --sidebar-ring: #d22b2b;
 }
 
 .dark {
@@ -118,7 +118,7 @@
   --muted: oklch(0.274 0.006 286.033);
   --muted-foreground: oklch(0.705 0.015 286.067);
   --accent: oklch(0.274 0.006 286.033);
-  --accent-foreground:  oklch(0.92 0.005 65);
+  --accent-foreground: oklch(0.92 0.005 65);
   --destructive: oklch(0.704 0.191 22.216);
   --destructive-foreground: oklch(0.985 0 0);
   --border: oklch(1 0 0 / 10%);
@@ -132,7 +132,7 @@
   --sidebar: oklch(0.21 0.006 285.885);
   --sidebar-foreground: oklch(0.85 0.005 65);
   --sidebar-accent: oklch(0.274 0.006 286.033);
-  --sidebar-accent-foreground:  oklch(0.985 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.488 0.243 264.376);
 }
@@ -143,30 +143,55 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
   }
-  
+
   /* Typography: Bold sans-serif for industrial aesthetic */
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-black tracking-tight;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 900;
   }
-  
-  h1 { @apply text-5xl md:text-6xl; }
-  h2 { @apply text-4xl md:text-5xl; }
-  h3 { @apply text-2xl md:text-3xl; }
-  h4 { @apply text-xl md:text-2xl; }
-  
+
+  h1 {
+    @apply text-5xl md:text-6xl;
+  }
+  h2 {
+    @apply text-4xl md:text-5xl;
+  }
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+  h4 {
+    @apply text-xl md:text-2xl;
+  }
+
   /* Accent text: Brand red - using CSS variables */
-  .text-accent { color: var(--brand-red); }
-  .bg-accent { background-color: var(--brand-red); }
-  
+  .text-accent {
+    color: var(--brand-red);
+  }
+  .bg-accent {
+    background-color: var(--brand-red);
+  }
+
   /* Brand red custom utilities */
-  .text-brand-red { color: var(--brand-red); }
-  .bg-brand-red { background-color: var(--brand-red); }
-  .border-brand-red { border-color: var(--brand-red); }
-  .hover\:bg-brand-red-dark:hover { background-color: var(--brand-red-dark); }
+  .text-brand-red {
+    color: var(--brand-red);
+  }
+  .bg-brand-red {
+    background-color: var(--brand-red);
+  }
+  .border-brand-red {
+    border-color: var(--brand-red);
+  }
+  .hover\:bg-brand-red-dark:hover {
+    background-color: var(--brand-red-dark);
+  }
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
   [type="button"]:not(:disabled),

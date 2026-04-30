@@ -51,7 +51,10 @@ export default function Services() {
         canonicalUrl="https://subhengineeringworks.com/services"
         jsonLd={breadcrumbSchema([
           { name: "Home", url: "https://subhengineeringworks.com/" },
-          { name: "Services", url: "https://subhengineeringworks.com/services" },
+          {
+            name: "Services",
+            url: "https://subhengineeringworks.com/services",
+          },
         ])}
       />
       <Navigation />
@@ -62,19 +65,31 @@ export default function Services() {
             What <span style={{ color: "#D22B2B" }}>We Do</span>
           </h1>
           <p className="text-lg text-gray-300 max-w-4xl">
-            Beyond valve supply, we offer end-to-end engineering support that helps plants reduce downtime, improve safety, and maintain process stability.
+            Beyond valve supply, we offer end-to-end engineering support that
+            helps plants reduce downtime, improve safety, and maintain process
+            stability.
           </p>
         </div>
       </header>
 
       <section className="py-24 px-6 border-b border-gray-200">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-black uppercase tracking-tight mb-4">Service Offerings</h2>
-          <div className="h-1 w-24 mb-16" style={{ backgroundColor: "#D22B2B" }}></div>
+          <h2 className="text-4xl font-black uppercase tracking-tight mb-4">
+            Service Offerings
+          </h2>
+          <div
+            className="h-1 w-24 mb-16"
+            style={{ backgroundColor: "#D22B2B" }}
+          ></div>
           <div className="grid md:grid-cols-2 gap-8">
             {services.map((service, idx) => (
-              <div key={idx} className="bg-gray-50 border-2 border-gray-200 p-8 hover:shadow-lg transition">
-                <h3 className="text-2xl font-black uppercase mb-4">{idx + 1}. {service.title}</h3>
+              <div
+                key={idx}
+                className="bg-gray-50 border-2 border-gray-200 p-8 hover:shadow-lg transition"
+              >
+                <h3 className="text-2xl font-black uppercase mb-4">
+                  {idx + 1}. {service.title}
+                </h3>
                 <p className="text-gray-700 leading-relaxed">{service.desc}</p>
               </div>
             ))}
@@ -84,8 +99,13 @@ export default function Services() {
 
       <section className="bg-gray-50 py-24 px-6 border-b border-gray-200">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-black uppercase tracking-tight mb-4">Why Industries Choose Our Service Team</h2>
-          <div className="h-1 w-24 mb-12" style={{ backgroundColor: "#D22B2B" }}></div>
+          <h2 className="text-4xl font-black uppercase tracking-tight mb-4">
+            Why Industries Choose Our Service Team
+          </h2>
+          <div
+            className="h-1 w-24 mb-12"
+            style={{ backgroundColor: "#D22B2B" }}
+          ></div>
           <div className="grid md:grid-cols-3 gap-6">
             {[
               "Single vendor support for manufacturing, supply, and maintenance",
@@ -105,15 +125,27 @@ export default function Services() {
 
       <section className="bg-black text-white py-20 px-6">
         <div className="max-w-5xl mx-auto text-center">
-          <h2 className="text-4xl font-black uppercase tracking-tight mb-8">Talk To Our Service Team</h2>
+          <h2 className="text-4xl font-black uppercase tracking-tight mb-8">
+            Talk To Our Service Team
+          </h2>
           <div className="flex gap-4 justify-center flex-wrap">
-            <button onClick={() => setLocation("/contact")} className="text-white px-8 py-4 text-sm font-bold uppercase tracking-widest transition" style={{ backgroundColor: "#D22B2B" }}>
+            <button
+              onClick={() => setLocation("/contact")}
+              className="text-white px-8 py-4 text-sm font-bold uppercase tracking-widest transition"
+              style={{ backgroundColor: "#D22B2B" }}
+            >
               Get a Service Quote
             </button>
-            <button onClick={() => setLocation("/contact")} className="border-2 border-white text-white px-8 py-4 text-sm font-bold uppercase tracking-widest transition">
+            <button
+              onClick={() => setLocation("/contact")}
+              className="border-2 border-white text-white px-8 py-4 text-sm font-bold uppercase tracking-widest transition"
+            >
               Schedule an Inspection
             </button>
-            <button onClick={() => setLocation("/contact")} className="border-2 border-white text-white px-8 py-4 text-sm font-bold uppercase tracking-widest transition">
+            <button
+              onClick={() => setLocation("/contact")}
+              className="border-2 border-white text-white px-8 py-4 text-sm font-bold uppercase tracking-widest transition"
+            >
               Talk to Our Engineer
             </button>
           </div>

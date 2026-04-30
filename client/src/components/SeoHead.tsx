@@ -68,7 +68,11 @@ export default function SeoHead({
   return null;
 }
 
-function updateMetaTag(type: "name" | "property", attribute: string, content: string) {
+function updateMetaTag(
+  type: "name" | "property",
+  attribute: string,
+  content: string
+) {
   let tag = document.querySelector(`meta[${type}='${attribute}']`);
   if (!tag) {
     tag = document.createElement("meta");

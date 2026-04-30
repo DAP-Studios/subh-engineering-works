@@ -41,8 +41,12 @@ export default function SocialProof() {
     <div className="grid md:grid-cols-3 gap-8">
       {stats.map((stat, idx) => (
         <div key={idx} className="text-center">
-          <div className="text-5xl font-black text-brand-red mb-3">{stat.number}</div>
-          <h3 className="text-lg font-black uppercase tracking-tight mb-2">{stat.label}</h3>
+          <div className="text-5xl font-black text-brand-red mb-3">
+            {stat.number}
+          </div>
+          <h3 className="text-lg font-black uppercase tracking-tight mb-2">
+            {stat.label}
+          </h3>
           <p className="text-sm text-gray-600">{stat.description}</p>
         </div>
       ))}

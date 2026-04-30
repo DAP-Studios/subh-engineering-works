@@ -40,8 +40,13 @@ export default function TrustBadges() {
   return (
     <div className="grid md:grid-cols-6 gap-4">
       {badges.map((badge, idx) => (
-        <div key={idx} className="bg-white border-2 border-gray-200 p-4 text-center hover:border-brand-red transition">
-          <div className="text-3xl font-black text-brand-red mb-2">{badge.icon}</div>
+        <div
+          key={idx}
+          className="bg-white border-2 border-gray-200 p-4 text-center hover:border-brand-red transition"
+        >
+          <div className="text-3xl font-black text-brand-red mb-2">
+            {badge.icon}
+          </div>
           <h3 className="text-xs font-black uppercase tracking-widest text-gray-900 mb-1">
             {badge.title}
           </h3>

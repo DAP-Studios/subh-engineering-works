@@ -7,6 +7,7 @@
 import { useState } from "react";
 import { useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
+import logoimage from "@/assets/logo.png";
 
 export default function Navigation() {
   const [, setLocation] = useLocation();
@@ -40,27 +41,43 @@ export default function Navigation() {
           {/* Logo */}
           <button
             onClick={() => handleNavClick("/")}
-            className="flex items-center gap-3 hover:opacity-80 transition flex-shrink-0"
+            className="flex items-center gap-2 hover:opacity-80 transition flex-shrink-0"
           >
-            <span className="text-3xl font-black tracking-tighter" style={{ color: "#D22B2B" }}>
-              SUBH
-            </span>
-            <div className="text-left leading-none border-l-3 border-black pl-2 uppercase text-xs font-extrabold tracking-widest">
-              <p>Engineering</p>
-              <p>Works</p>
+            <img
+              src={logoimage}
+              alt="Subh Engineering Works Logo"
+              className="h-10 sm:h-12 w-auto md:h-14 object-contain"
+            />
+            <div className="hidden sm:flex items-center gap-2">
+              <span
+                className="text-2xl sm:text-3xl font-black tracking-tighter leading-none"
+                style={{ color: "#D22B2B" }}
+              >
+                SUBH
+              </span>
+              <div className="text-left leading-none border-l-[3px] border-black pl-2 uppercase text-[10px] sm:text-xs font-extrabold tracking-widest flex flex-col justify-center">
+                <span>Engineering</span>
+                <span>Works</span>
+              </div>
             </div>
           </button>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex gap-8 items-center text-xs font-bold uppercase tracking-widest">
-            {navItems.map((item) => (
+            {navItems.map(item => (
               <button
                 key={item.path}
                 onClick={() => handleNavClick(item.path)}
                 className="text-gray-700 hover:text-brand-red transition pb-1 whitespace-nowrap"
                 style={{
-                  borderBottom: window.location.pathname === item.path ? "2px solid #D22B2B" : "none",
-                  color: window.location.pathname === item.path ? "#D22B2B" : "inherit",
+                  borderBottom:
+                    window.location.pathname === item.path
+                      ? "2px solid #D22B2B"
+                      : "none",
+                  color:
+                    window.location.pathname === item.path
+                      ? "#D22B2B"
+                      : "inherit",
                 }}
               >
                 {item.label}
@@ -70,8 +87,8 @@ export default function Navigation() {
               onClick={() => handleNavClick("/contact")}
               className="text-white px-6 py-2 font-bold transition ml-4"
               style={{ backgroundColor: "#D22B2B" }}
-              onMouseEnter={(e) => (e.currentTarget.style.opacity = "0.9")}
-              onMouseLeave={(e) => (e.currentTarget.style.opacity = "1")}
+              onMouseEnter={e => (e.currentTarget.style.opacity = "0.9")}
+              onMouseLeave={e => (e.currentTarget.style.opacity = "1")}
             >
               Contact
             </button>
@@ -91,14 +108,20 @@ export default function Navigation() {
         {mobileMenuOpen && (
           <div className="lg:hidden absolute top-full left-0 right-0 bg-white border-b-2 border-gray-200 shadow-lg">
             <nav className="flex flex-col">
-              {navItems.map((item) => (
+              {navItems.map(item => (
                 <button
                   key={item.path}
                   onClick={() => handleNavClick(item.path)}
                   className="px-6 py-4 text-left text-sm font-bold uppercase tracking-widest text-gray-700 hover:bg-gray-50 border-b border-gray-100 transition"
                   style={{
-                    backgroundColor: window.location.pathname === item.path ? "#f3f4f6" : "transparent",
-                    color: window.location.pathname === item.path ? "#D22B2B" : "inherit",
+                    backgroundColor:
+                      window.location.pathname === item.path
+                        ? "#f3f4f6"
+                        : "transparent",
+                    color:
+                      window.location.pathname === item.path
+                        ? "#D22B2B"
+                        : "inherit",
                   }}
                 >
                   {item.label}
